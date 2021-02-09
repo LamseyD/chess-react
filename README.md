@@ -6,3 +6,6 @@ Run npm install
 
 # Start development server
 Run npm start
+
+# Known issues
+- Landing page not responsive on mobile. 
