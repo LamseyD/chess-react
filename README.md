@@ -8,4 +8,9 @@ Run npm install
 Run npm start
 
 # Known issues
-- Landing page not responsive on mobile. 
+- Trying to adopt a convention for commit messages
+
+# Planned features
+- Storing authentication in cookies by hashing the token and then store to maximize security.
+- Implement Axios headers to make it more secure
+- User account should be able track their chess history
