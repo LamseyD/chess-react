@@ -13,3 +13,4 @@ Run npm start
 # Planned features
 - Storing authentication in cookies by hashing the token and then store to maximize security.
 - Implement Axios headers to make it more secure
+- User account should be able track their chess history
