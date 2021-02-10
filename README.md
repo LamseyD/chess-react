@@ -9,3 +9,7 @@ Run npm start
 
 # Known issues
 - Trying to adopt a convention for commit messages
+
+# Planned features
+- Storing authentication in cookies by hashing the token and then store to maximize security.
+- Implement Axios headers to make it more secure
