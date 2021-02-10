@@ -1,12 +1,15 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { Typography, Grid, TextField, Button, ThemeProvider} from '@material-ui/core'
-import useStyles from './styles'
-
 import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
+import useStyles from './styles';
 
+import { useDispatch } from 'react-redux';
+import { getAllInfo } from '../../actions/chess';
+import { useHistory } from 'react-router-dom';
 const Home = () => {
-
     const classes = useStyles();
+    const dispatch = useDispatch();
+    const history = useHistory();
     const [usernameInput, setUsernameInput] = useState("");
 
     //Making sure the theme is responsive.
@@ -17,6 +20,8 @@ const Home = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log(usernameInput);
+        dispatch(getAllInfo(usernameInput));
+        history.push(`/results/${usernameInput}`);
     }
 
 
