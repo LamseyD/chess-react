@@ -8,4 +8,4 @@ Run npm install
 Run npm start
 
 # Known issues
-- Landing page not responsive on mobile. 
+- Trying to adopt a convention for commit messages
