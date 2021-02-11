@@ -1,5 +1,3 @@
-# NOTES
-To Bill and Constant, If you are reading this then I am staying up the night of Feb 10 to try to implement as many features as I could. Hopefully you can make a decision by 1130AM Feb 11.
 # Chess React
 This is a quick demo of a React Application, which lets you to retrieve your profile from chess.com api.
 
