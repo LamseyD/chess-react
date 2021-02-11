@@ -20,8 +20,12 @@ const Home = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log(usernameInput);
-        dispatch(getAllInfo(usernameInput));
-        history.push(`/results/${usernameInput}`);
+        if (!usernameInput)
+            alert("You must enter an username");
+        else {
+            dispatch(getAllInfo(usernameInput));
+            history.push(`/results/${usernameInput}`);
+        }
     }
 
 
@@ -44,6 +48,7 @@ const Home = () => {
                             onChange={event => setUsernameInput(event.target.value)} 
                             value={usernameInput} 
                             fullWidth
+                            required
                         />
                         <Button variant="contained" color="primary" size="large" type="submit" fullWidth>
                             Submit
