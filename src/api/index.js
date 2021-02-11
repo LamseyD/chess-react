@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const CHESS_API = axios.create({baseURL: 'https://api.chess.com/pub/player/'});
 
-const API = axios.create({baseURL: ''})
+const API = axios.create({baseURL: 'http://localhost:3001/'});
 
 export const getUserInfo = (username) => CHESS_API.get(`/${username}`);
 
