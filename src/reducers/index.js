@@ -1,7 +1,8 @@
 import { combineReducers } from 'redux'
 
-import chess from './chess'
+import chess from './chess';
+import auth from './auth';
 
 export default combineReducers({
-    chess
+    chess, auth
 });
