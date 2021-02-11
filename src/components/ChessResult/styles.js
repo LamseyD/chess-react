@@ -1,26 +1,18 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 export default makeStyles((theme) => ({
-  mainContainer: {
-    display: 'flex',
-    alignItems: 'center',
-  },
-  smMargin: {
-    margin: theme.spacing(1),
-  },
-  actionDiv: {
-    textAlign: 'center',
-  },
   statsCard: {
       paddingTop: "2em" ,
       paddingBottom: "2em",
     //   marginLeft: "1em", 
     //   marginRight:"1em", 
-      backgroundColor: "#f2f2f7", 
-      borderRadius: "10px"
+
   },
   statsContainer:{
       marginTop: "2em", 
+      backgroundColor: "#f2f2f7", 
+      borderRadius: "10px"
+
   },
   avatar:{
       borderRadius: "50%", 

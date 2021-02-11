@@ -1,21 +1,31 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import useStyles from './styles';
 import { Typography, CircularProgress, Grid  } from '@material-ui/core';
 
+import { useHistory } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 import chessImage from '../../assets/chess.jpg';
 import puzzleImage from '../../assets/puzzle.jpg'
 const ChessResult = () => {
     const result = useSelector((state) => state.chess); //points at reducer/index.js for posts
+    const history = useHistory();
     const classes = useStyles();
 
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            if (!result.username){
+                history.push('/notFound');
+            }
+        }, 3000);
+        return () => clearTimeout(timer);
+      }, []);
+
     if (!result.username)
-        return (<div>
-            {/* Make this a separate component */}
-            <Typography> We couldn't find the user you were looking for.</Typography>
-        </div>);
+        return (<CircularProgress/>)
+
+
     console.log(result);
     return (
         <div className = {classes.divContainer}>
@@ -26,7 +36,7 @@ const ChessResult = () => {
                     <Typography variant = "h5" color = "textSecondary"> {result.name} </Typography>
                     <img src={`https://www.countryflags.io/${result.country.slice(-2).toLowerCase()}/shiny/32.png`} alt = "flag"/>
                 </Grid>
-                <Grid container xs = {12} sm = {12} className = {classes.statsContainer} alignItems = "center" justifyContent = "center">
+                <Grid container xs = {12} sm = {6} className = {classes.statsContainer} alignItems = "center" justifyContent = "center">
                     <Grid item xs = {12} sm = {6} className = {classes.statsCard}>
                         <div>
                             <Typography variant = "h5"> Chess Blitz </Typography>
