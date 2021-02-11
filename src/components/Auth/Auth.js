@@ -12,7 +12,7 @@ import { signIn, signUp } from '../../actions/auth'
 
 const initialState = {
     email: '',
-    chessComName: '',
+    chessUsername: '',
     password: '',
     confirmPassword: ''
 }
